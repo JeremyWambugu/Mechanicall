@@ -14,7 +14,7 @@
 .checked {
   color: orange;
 }
-*{
+*,body{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -53,15 +53,13 @@ header{
 	position: fixed;
 	top: 2.5rem;
 	right: 2.5rem;
-	color: #eeeeee;
+	/* color: #eeeeee; */
 	font-size: 3rem;
 	cursor: pointer;
 	z-index: 1000;
 	display: none;
 }
- header:hover{
-	 
- }
+ 
 nav{
 	padding-top: 5rem;
 	display: flex;
@@ -76,6 +74,15 @@ nav{
 	font-weight: 300;
 	transform: translateX(-100rem);
 	animation: slideIn .5s forwards;
+	
+}
+#mbele{
+	color: rgb(255, 155, 24);
+
+	font-family: 'Poiret One', cursive;
+	margin-top: 220px;
+	font-size: 40px;
+	
 }
 
 .brand span{
@@ -94,7 +101,7 @@ nav ul li{
 
 nav ul li:nth-child(1){
 	animation-delay: 0s;
-	text-decoration: none;
+
 }
 
 nav ul li:nth-child(2){
@@ -145,10 +152,12 @@ nav ul li a::after{
 
 nav ul li a:hover{
 	text-decoration-color: none;
-	color:
+	
 	
 }
-
+.orange{
+	color:rgb(255, 155, 24);
+}
 .overlay{
 	background-color: rgba(0,0,0,.95);
 	position: fixed;
@@ -165,7 +174,7 @@ nav ul li a:hover{
 nav ul li a:hover::before,
 nav ul li a:hover::after{
 	transform: scaleX(1);
-	text-decoration-line: none;
+	
 }
 
 @keyframes slideIn {
@@ -217,4 +226,40 @@ nav ul li a:hover::after{
 	  opacity: 1;
   }
   
+}
+section{
+	height:100vh;
+	
+}
+h1{
+	margin: 0;
+	padding: 0;
+	position: absolute; 
+	margin-top:240px; 
+	transform: translateY(-50%);
+	width:100%;
+	text-align:center;
+	color:#ddd; 
+	font-size:6em;
+	font-family: sans-serif;
+	letter-spacing: 0.1em;
+	
+}
+h1 span{
+	/*   */
+	display: inline-block;
+	animation:animate 3s linear forwards; 
+}
+@keyframes animate
+{
+0%{
+opacity: 0.1;
+transform: rotateY(90deg);
+filter:blur(10px);
+}
+0%{
+	opacity: 100%;
+	transform: rotateY(0deg);
+filter:blur(0px);
+}
 }
